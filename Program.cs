@@ -10,7 +10,6 @@ namespace exercicio06
         static void Main(string[] args)
         {
 
-            
             Double salary;
 
             Program p = new Program();
@@ -26,26 +25,30 @@ namespace exercicio06
             Console.WriteLine();
 
             Console.Write("Com o devido reajuste, o seu novo salário é de: ");
-            Console.Write(p.Calculator(newSalary));
+            salary = p.Calculator(salary);
 
+            Console.Write(salary);
+
+            Console.WriteLine();
             Console.ReadKey();
             
 
         }
 
-        private double Calculator(double salary)
+        private double Calculator(double LEO)
         {
 
             double newSalary = 0;
 
-            if(salary < 1700)
+            if(LEO < 1700)
             {
-                newSalary = (salary + 300);
+                newSalary = (LEO + 300);
             }
             else
             {
-                newSalary = (salary + 200);
+                newSalary = (LEO + 200);
             }
+            LEO = 100;
             return newSalary;
         }
     }
